@@ -18,7 +18,7 @@ var gulp         = require('gulp'),
 
 // start compiling code as soon as gulp is called, and watch for file changes
 gulp.task('default', ['build-all'], function(){
-	browsersync.init({ server: './' });
+	browsersync.init({ server: './', port: process.env.PORT, host: process.env.IP});
 
 	// watch for changes inside src folder
 	gulp.watch(src_path + '**/*.styl', ['build-css']);

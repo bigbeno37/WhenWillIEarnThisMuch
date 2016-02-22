@@ -10,9 +10,49 @@ html.no-js(lang="en")
       .browsehappy
         p
           | You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience
-
-
-
+    
+    br
+    
+    .container
+      .row
+        .twelve.columns
+          h1.center When Will I Earn This Much
+    
+    br
+    
+    .container
+      form
+        .row
+          .six.columns
+            label(for="moneyPerWeek") Amount of money you earn every week
+            input.u-full-width#moneyPerWeek(type="text", placeholder="50")
+          .six.columns
+            label(for="initialAmount") Amount of money you already have
+            input.u-full-width#initialAmount(type="text", placeholder="0")
+            
+        .row
+          .six.columns
+            label(for="finalAmount") Amount of money you want to have
+            input.u-full-width#finalAmount(type="text", placeholder="2000")
+          .six.columns
+            label(for="dayEarnedMoney") When you earn your money
+            select.u-full-width#dayEarnedMoney
+              option(value="Monday") Monday
+              option(value="Tuesday") Tuesday
+              option(value="Wednesday") Wednesday
+              option(value="Thursday") Thursday
+              option(value="Friday") Friday
+              option(value="Saturday") Saturday
+              option(value="Sunday") Sunday
+            
+        .row
+          .twelve.columns
+            a.button.button-primary.calculateButton Calculate
+            
+    .container
+      .row
+        .twelve.columns
+          .price.center.mediumFontSize
 
 
 
@@ -27,3 +67,4 @@ html.no-js(lang="en")
 
     script(src="dist/js/plugins.js")
     script(src="dist/js/script.js")
+    script(src="dist/js/moment.js")
