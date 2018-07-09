@@ -24,7 +24,7 @@ function calculate() {
         (dateEarned.getDate() + 7*weeks) + daysUntil(dayPaid, currentDate.getDay()
     ));
 
-    console.log(dateEarned.toDateString());
+    $(".date").innerText = `You will earn $${desiredAmount} on ${dateEarned.toDateString()}`;
 }
 // Calculate how many more weeks are required to earn desired amount
 function weeksUntilDesiredAmount(desiredAmount, currentAmount, amountPerWeek) {
